@@ -5,10 +5,16 @@ export const Block = styled.div`
 `;
 
 export const CallToAction = styled.p`
-
+    color: ${p => p.theme.colors.title};
 `;
 
 export const ChooseButton = styled.button`
+    display: flex;
+    
+    border: ${p => p.theme.border};
+    border-color: ${p => p.theme.colors.border};
+    border-radius: ${p => p.theme.radii};
+
 
 `;
 

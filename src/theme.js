@@ -2,15 +2,10 @@ export const theme = {
     colors: {
       text: '#a7aaad',
       title: '#2c3338',
-      background: '#f0f0f1', 
-      secondBackground: '#ffffff',                                
+      background: '#f0f0f1',                                
       itemBackground: '#f0f6fc',
       primary: '#3d464d',
-      secondary: '#ffffff',
       border: '#dcdcde',
-      table: '#02edd1',
-      online: '#03dc3f',
-      offline: '#f30505',
     },
 
     fonts: {
