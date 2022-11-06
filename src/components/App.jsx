@@ -1,4 +1,4 @@
-import { Box } from '../Box';
+import { Box } from '../components/Box';
 import { Feedback } from 'components/Feedback/Feedback'
 
 export const App = () => {
@@ -14,7 +14,6 @@ export const App = () => {
       }}
     >
       <Feedback/>
-      React homework template
     </Box>
   );
 };

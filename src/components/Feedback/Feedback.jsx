@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import {Block, CallToAction,ChooseButton ,FeedbackList, FeedbackItem, FeedbackName } from './Feedback.styled';
+import {Block, CallToAction, ChooseButton, FeedbackList, FeedbackItem, FeedbackName } from './Feedback.styled';
 import { Box } from '../Box';
 
 export const Feedback = () => {
