@@ -37,13 +37,6 @@ export const theme = {
 
     radii:{
       normal: '4px',
-      round: '50%',
-      top:  '4px 4px 0 0',
-      bottom: '0 0 4px 4px', 
-      bottomRight: '0 0 0 4px',
-      bottomLeft: '0 0 4px 0',   
-        topRight: '4px 0 0 0',
-        topLeft: '0 4px 0 0', 
 },
 
     shadows: {

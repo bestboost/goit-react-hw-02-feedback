@@ -1,30 +1,30 @@
 import PropTypes from 'prop-types';
-import {} from './Feedback.styled';
+import {Block, CallToAction,ChooseButton ,FeedbackList, FeedbackItem, FeedbackName } from './Feedback.styled';
 import { Box } from '../Box';
 
 export const Feedback = () => {
     return (
         <Box>
-        <div>
-      <p>Please laeve feedback</p>
-      <button>Good</button>
-      <button>Neutral</button>
-      <button>Bad</button>
-      <ul>
-        <li>
-            <p>Good:</p>
+        <Block>
+      <CallToAction>Please laeve feedback</CallToAction>
+      <ChooseButton>Good</ChooseButton>
+      <ChooseButton>Neutral</ChooseButton>
+      <ChooseButton>Bad</ChooseButton>
+      <FeedbackList>
+        <FeedbackItem>
+            <FeedbackName >Good:</FeedbackName >
             <span></span>
-        </li>
-        <li>
-            <p>Neutral:</p>
+        </FeedbackItem>
+        <FeedbackItem>
+            <FeedbackName >Neutral:</FeedbackName >
             <span></span>
-        </li>
-        <li>
-            <p>Bad:</p>
+        </FeedbackItem>
+        <FeedbackItem>
+            <FeedbackName >Bad:</FeedbackName >
             <span></span>
-        </li>
-      </ul>
-      </div>
+        </FeedbackItem>
+      </FeedbackList>
+      </Block>
       </Box>
     );
 };
