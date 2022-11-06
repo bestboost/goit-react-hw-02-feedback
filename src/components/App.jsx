@@ -1,6 +1,9 @@
+import { Box } from '../Box';
+import { Feedback } from 'components/Feedback/Feedback'
+
 export const App = () => {
   return (
-    <div
+    <Box
       style={{
         height: '100vh',
         display: 'flex',
@@ -10,7 +13,8 @@ export const App = () => {
         color: '#010101'
       }}
     >
+      <Feedback/>
       React homework template
-    </div>
+    </Box>
   );
 };
