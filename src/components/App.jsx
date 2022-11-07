@@ -1,5 +1,5 @@
 import { Box } from '../components/Box';
-import { Feedback } from 'components/Feedback/Feedback'
+import  Feedback  from 'components/Feedback/Feedback'
 
 export const App = () => {
   return (
@@ -17,3 +17,5 @@ export const App = () => {
     </Box>
   );
 };
+
+export default App;

@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { textStyle } from 'styled-system';
 
 export const Block = styled.div`
-
 `;
 
 export const CallToAction = styled.p`
@@ -10,8 +9,13 @@ export const CallToAction = styled.p`
     font-size: ${p =>p.theme.fontSizes.xl}px;
 `;
 
+export const Buttons = styled.div`
+`;
+
 export const ChooseButton = styled.button`
     padding: ${p => p.theme.space[2]}px;
+    padding-right: ${p => p.theme.space[3]}px;
+    padding-left: ${p => p.theme.space[3]}px;
     margin-right: ${p => p.theme.space[4]}px;
     font-size: ${p => p.theme.fontSizes.m}px;
     color: ${p => p.theme.colors.text};
@@ -27,20 +31,29 @@ export const ChooseButton = styled.button`
 `;
 
 export const FeedbackList = styled.ul`
-padding: 0;
-list-style-type: none;
+    padding: 0;
+    list-style-type: none;
 `;
 
 export const FeedbackItem = styled.li`
+display: flex;
+justify-contenr: center;
+aline-item: center;
+
     margin-bottom: ${p => p.theme.space[0]}px;
 `;
     
 export const FeedbackName = styled.p`
+
    font-size: ${p => p.theme.fontSizes.l}px;
    color: ${p => p.theme.colors.text};
    margin-bottom: ${p => p.theme.space[0]}px;
 `;
       
-export const Statistics = styled.span`
-
+export const Statistic = styled.span`
+    display: flex;
+    align-items: flex-end;
+    padding-left: ${p => p.theme.space[3]}px;
+    font-size: ${p => p.theme.fontSizes.l}px;
+    color: ${p => p.theme.colors.text};
 `;
