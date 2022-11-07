@@ -1,10 +1,10 @@
 export const theme = {
     colors: {
-      text: '#a7aaad',
+      text: '#848688',
       title: '#2c3338',
       background: '#f0f0f1', 
       secondBackground: '#ffffff',                                
-      itemBackground: '#f0f6fc',
+      itembackground: '#f0f6fc',
       primary: '#3d464d',
       border: '#dcdcde',
     },
@@ -16,10 +16,10 @@ export const theme = {
     space:[0, 2, 4, 8, 18, 32, 64, 128, 256],
 
     fontSizes:{
-        s:10,
-        m: 15,
-        l: 20,
-        xl: 25,
+        s:15,
+        m: 20,
+        l: 25,
+        xl: 35,
 
     },
 
@@ -28,7 +28,7 @@ export const theme = {
     },
 
     border: {
-        normal: '1px solid',
+        normal: '2px solid',
     },
 
     radii:{
