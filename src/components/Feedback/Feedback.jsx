@@ -1,18 +1,18 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {Component} from 'react';
 import {Block, CallToAction, FeedbackList, FeedbackItem, FeedbackName, Statistic } from './Feedback.styled';
 import { Box } from '../Box';
 import AddButton from './AddButton';
- 
-class Feedback extends React.Component {
+
+class Feedback extends Component {
   static propTypes = {
      state: PropTypes.shape ({
-        good: PropTypes.number,
-        neutral: PropTypes.number,
-        bad: PropTypes.number
+        good: PropTypes.number.isRequired,
+        neutral: PropTypes.number.isRequired,
+        bad: PropTypes.number.isRequired
      })
   };
-
+ 
     state = {
         good: 0,
         neutral: 0,
@@ -37,18 +37,20 @@ handleAddBad = () => {
 }))
 }; 
 
-// countTotalFeedback = () => {
-//     let total = 0;
-//     return {
-//        total = handleAddGood + handleAddNeutral +handleAddBad
-//     }
-    
-// };
 
+countTotalFeedback = () => {
+    this.setState(prevState => ({
+
+    state: prevState.state.reduce((total, state) => (
+     state.completed ? total + 1 : total), 0
+    )}));
+ 
+};
 
 // countPositiveFeedbackPercentage();
 
     render() { 
+
         return (
             <Box>
               <Block>
@@ -73,7 +75,7 @@ handleAddBad = () => {
                     </FeedbackItem>    
                     <FeedbackItem>
                         <FeedbackName >Total:</FeedbackName >
-                        <Statistic>0</Statistic>
+                        <Statistic >0</Statistic>
                     </FeedbackItem>
                     <FeedbackItem>
                         <FeedbackName >Positive feedback:</FeedbackName >

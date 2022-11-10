@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { textStyle } from 'styled-system';
+import  {style}  from 'styled-system';
 
 export const Block = styled.div`
 `;
@@ -13,6 +13,7 @@ export const Buttons = styled.div`
 `;
 
 export const ChooseButton = styled.button`
+cursor: pointer;
     padding: ${p => p.theme.space[2]}px;
     padding-right: ${p => p.theme.space[3]}px;
     padding-left: ${p => p.theme.space[3]}px;
@@ -23,6 +24,10 @@ export const ChooseButton = styled.button`
     border: ${p => p.theme.border.normal};
     border-color: ${p => p.theme.colors.border};
     border-radius: ${p => p.theme.radii.normal};
+ 
+    :hover, 
+    :focus{ 
+    background-color: ${p => p.theme.colors.hover}};
    
     :last-of-type {
         margin-right: ${p => p.theme.space[0]}px;

@@ -7,6 +7,7 @@ export const theme = {
       itembackground: '#f0f6fc',
       primary: '#3d464d',
       border: '#dcdcde',
+      hover: '#64baf3c7',
     },
 
     fonts: {
