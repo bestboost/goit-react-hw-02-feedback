@@ -40,16 +40,22 @@ handleAddBad = () => {
 
 
 countTotalFeedback = () => {
-   
+ const {good, neutral, bad} = this.state;
+ return good + neutral + bad;
 
 };
 
 
-// countPositiveFeedbackPercentage();
+countPositiveFeedbackPercentage = () => {
+    const {good, neutral, bad} = this.state;
+    const total = good + neutral + bad;
+    return Math.round((good*100) / total) || 0;
+};
+
 
     render() { 
-const total = this.state.good + this.state.neutral + this.state.bad;
-const percentage = ((total - this.state.bad)*100)/total;
+const total = this.countTotalFeedback();
+const positivePercentage = this.countPositiveFeedbackPercentage();
 
         return (
             <Box>
@@ -79,7 +85,7 @@ const percentage = ((total - this.state.bad)*100)/total;
                     </FeedbackItem>
                     <FeedbackItem>
                         <FeedbackName >Positive feedback:</FeedbackName >
-                        <Statistic>{percentage}%</Statistic>
+                        <Statistic>{positivePercentage}%</Statistic>
                     </FeedbackItem>
                  </FeedbackList>
                </Block>
