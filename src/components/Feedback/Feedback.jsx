@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {Block, CallToAction, FeedbackList, FeedbackItem, FeedbackName, Statistic } from './Feedback.styled';
+import {Block, CallToAction, FeedbackList, FeedbackItem, FeedbackName, Statistic, Buttons, ChooseButton} from './Feedback.styled';
 import { Box } from '../Box';
-import AddButton from './AddButton';
+// import AddButton from './AddButton';
 
 class Feedback extends Component {
   static propTypes = {
@@ -12,7 +12,8 @@ class Feedback extends Component {
         bad: PropTypes.number.isRequired
      })
   };
- 
+
+
     state = {
         good: 0,
         neutral: 0,
@@ -39,27 +40,26 @@ handleAddBad = () => {
 
 
 countTotalFeedback = () => {
-    this.setState(prevState => ({
+   
 
-    state: prevState.state.reduce((total, state) => (
-     state.completed ? total + 1 : total), 0
-    )}));
- 
 };
+
 
 // countPositiveFeedbackPercentage();
 
     render() { 
+const total = this.state.good + this.state.neutral + this.state.bad;
+const percentage = ((total - this.state.bad)*100)/total;
 
         return (
             <Box>
               <Block>
                  <CallToAction>Please laeve feedback</CallToAction>
-                <AddButton 
-                onAddGood={this.handleAddGood}
-                onAddNeutral={this.handleAddNeutral}
-                onAddBad={this.handleAddBad}
-                />
+                 <Buttons>
+    <ChooseButton type="button" onClick={this.handleAddGood}>Good</ChooseButton>
+    <ChooseButton type="button" onClick={this.handleAddNeutral}>Neutral</ChooseButton>
+    <ChooseButton type="button" onClick={this.handleAddBad}>Bad</ChooseButton>
+  </Buttons> 
                  <FeedbackList>
                     <FeedbackItem>
                         <FeedbackName >Good:</FeedbackName > 
@@ -75,11 +75,11 @@ countTotalFeedback = () => {
                     </FeedbackItem>    
                     <FeedbackItem>
                         <FeedbackName >Total:</FeedbackName >
-                        <Statistic >0</Statistic>
+                        <Statistic >{total}</Statistic>
                     </FeedbackItem>
                     <FeedbackItem>
                         <FeedbackName >Positive feedback:</FeedbackName >
-                        <Statistic>0%</Statistic>
+                        <Statistic>{percentage}%</Statistic>
                     </FeedbackItem>
                  </FeedbackList>
                </Block>
