@@ -1,7 +1,29 @@
+import React, {Component} from 'react';
 import { Box } from '../components/Box';
-import  Feedback  from 'components/Feedback/Feedback'
+import Statistics from 'components/Statistics/Statistics';
+import FeedbackOptions from 'components/Feedback/FeedbackOptions';
+import Section from 'components/Title/SectionTitle';
 
-export const App = () => {
+import PropTypes from 'prop-types';
+
+class App extends Component {
+  static propTypes = {
+    children: PropTypes.element.isRequired,
+    state: PropTypes.shape ({
+       good: PropTypes.number.isRequired,
+       neutral: PropTypes.number.isRequired,
+       bad: PropTypes.number.isRequired
+    })
+ };
+
+   state = {
+       good: 0,
+       neutral: 0,
+       bad: 0,
+     }
+
+
+  render () {
   return (
     <Box
       style={{
@@ -13,9 +35,13 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      <Feedback/>
+      <Section title="Please leave feedback">
+        {/* <FeedbackOptions /> */}
+        <Statistics good={0} neutral={0} bad={0} total={0} positivePercentage={0}/>
+      </Section>
     </Box>
   );
+};
 };
 
 export default App;
