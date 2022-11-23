@@ -1,15 +1,21 @@
 import styled from 'styled-components';
 import  {style}  from 'styled-system';
 
+export const StatisticsTitle = styled.p`
+    color: ${p => p.theme.colors.title};
+    font-size: ${p =>p.theme.fontSizes.xl}px;
+`;
+
 export const FeedbackList = styled.ul`
-    padding: 0;
+    padding: ${p => p.theme.space[0]}px;
+    margin: ${p => p.theme.space[0]}px;
     list-style-type: none;
 `;
 
 export const FeedbackItem = styled.li`
-display: flex;
-justify-contenr: center;
-aline-item: center;
+    display: flex;
+    justify-contenr: center;
+    aline-item: center;
 
     margin-bottom: ${p => p.theme.space[0]}px;
 `;

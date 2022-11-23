@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import {Buttons, ChooseButton} from './FeedbackOptions.styled';
 import PropTypes from 'prop-types';
-import App from 'components/App';
-
 
 // const AddButton = ({ onAddGood, onAddNeutral, onAddBad }) => (
 //   <Buttons>
@@ -32,7 +30,7 @@ class FeedbackOptions extends Component {
     return (
       <Buttons>
         {this.props.options.map(option => (
-    <ChooseButton key={option} type="button" onClick={ (e) => this.props.onLeaveFeedback(option)}>{option}</ChooseButton>
+          <ChooseButton key={option} type="button" onClick={ (e) => this.props.onLeaveFeedback(option)}>{option}</ChooseButton>
          ))}
     </Buttons> 
     )

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {FeedbackList, FeedbackItem, FeedbackName, Statistic} from './Statistics.styled';
+import {StatisticsTitle, FeedbackList, FeedbackItem, FeedbackName, Statistic} from './Statistics.styled';
 import { Box } from '../Box';
 // import AddButton from 'components/Feedback/FeedbackOptions';
 // import App from 'components/App';
@@ -68,7 +68,7 @@ const {good, neutral, bad, total, positivePercentage} = this.props
    onAddNeutral={this.handleAddNeutral} 
    onAddBad={this.handleAddBad}/> */}
 
-   
+   <StatisticsTitle>Statistics</StatisticsTitle>
                  <FeedbackList>
                     <FeedbackItem>
                         <FeedbackName >Good:</FeedbackName > 

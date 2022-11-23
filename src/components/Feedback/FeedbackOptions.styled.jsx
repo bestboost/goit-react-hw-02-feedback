@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import  {style}  from 'styled-system';
+// import  {style}  from 'styled-system';
 
 export const Buttons = styled.div`
 `;
