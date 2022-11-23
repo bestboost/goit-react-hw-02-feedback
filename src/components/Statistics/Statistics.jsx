@@ -2,8 +2,6 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {StatisticsTitle, FeedbackList, FeedbackItem, FeedbackName, Statistic} from './Statistics.styled';
 import { Box } from '../Box';
-// import AddButton from 'components/Feedback/FeedbackOptions';
-// import App from 'components/App';
 
 class Feedback extends Component {
   static propTypes = {
@@ -23,52 +21,13 @@ class Feedback extends Component {
         positivePercentage: this.props.positivePercentage
       }
 
-// handleAddGood = () => {
-//     this.setState(prevState => ({
-//             good: prevState.good + 1,
-//     }))
-//   };  
-
-// handleAddNeutral = () => {
-//     this.setState(prevState => ({
-//         neutral: prevState.neutral + 1,
-// }))
-// }; 
-
-// handleAddBad = () => {
-//     this.setState(prevState => ({
-//         bad: prevState.bad + 1,
-// }))
-// }; 
-
-
-// countTotalFeedback = () => {
-//  const {good, neutral, bad} = this.state;
-//  return good + neutral + bad;
-
-// };
-
-
-// countPositiveFeedbackPercentage = () => {
-//     const {good, neutral, bad} = this.state;
-//     const total = good + neutral + bad;
-//     return Math.round((good*100) / total) || 0;
-// };
-
 
     render() { 
 const {good, neutral, bad, total, positivePercentage} = this.props
-// const total = this.countTotalFeedback();
-// const positivePercentage = this.countPositiveFeedbackPercentage();
 
         return (
             <Box>
-  {/* <App total = {total} />         */}
-  {/* <AddButton onAddGood={this.handleAddGood}
-   onAddNeutral={this.handleAddNeutral} 
-   onAddBad={this.handleAddBad}/> */}
-
-   <StatisticsTitle>Statistics</StatisticsTitle>
+              <StatisticsTitle>Statistics</StatisticsTitle>
                  <FeedbackList>
                     <FeedbackItem>
                         <FeedbackName >Good:</FeedbackName > 
