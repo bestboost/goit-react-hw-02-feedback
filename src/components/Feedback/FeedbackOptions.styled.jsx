@@ -11,7 +11,7 @@ cursor: pointer;
     margin-right: ${p => p.theme.space[4]}px;
     font-size: ${p => p.theme.fontSizes.m}px;
     color: ${p => p.theme.colors.text};
-    background-color: ${p => p.theme.colors. secondBackground};    
+    background-color: ${p => p.theme.colors.secondBackground};    
     border: ${p => p.theme.border.normal};
     border-color: ${p => p.theme.colors.border};
     border-radius: ${p => p.theme.radii.normal};

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import  {style}  from 'styled-system';
 
 export const StatisticsTitle = styled.p`
     color: ${p => p.theme.colors.title};

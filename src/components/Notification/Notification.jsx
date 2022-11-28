@@ -3,11 +3,9 @@ import React, {Component} from 'react';
 import {NotificBox, NotificText} from './Notification.styled'
 
 class Notification extends Component {
-    static proptypes = {
+    static propTypes = {
         message: PropTypes.string.isRequired,
     }
-
-    static defaultProps = '';
 
     state = {
         message: this.props.message,
