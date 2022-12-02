@@ -4,16 +4,8 @@ import Statistics from 'components/Statistics/Statistics';
 import FeedbackOptions from 'components/Feedback/FeedbackOptions';
 import Section from 'components/Title/SectionTitle';
 import Notification from 'components/Notification/Notification';
-import PropTypes from 'prop-types';
 
 class App extends Component {
-  static propTypes = {
-    state: PropTypes.shape ({
-       good: PropTypes.number.isRequired,
-       neutral: PropTypes.number.isRequired,
-       bad: PropTypes.number.isRequired
-    })
- };
 
    state = {
        good: 0,

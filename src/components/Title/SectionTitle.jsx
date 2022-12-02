@@ -6,25 +6,22 @@ import { Box } from '../Box';
 
 class Section extends Component {
     static propTypes = {
-        title: PropTypes.any.isRequired
+        title: PropTypes.string.isRequired
     };
 
     state = {
         title: this.props.title,
     }
 
-    renderChildren() {
-        return this.props.children
-      }
-
+   
     render () {
 
         return (
             
             <Box>
               <Block>
-                 <CallToAction>Please laeve feedback</CallToAction>
-                 <Block>{this.renderChildren()}</Block>
+                 <CallToAction>{this.props.title}</CallToAction>
+                 <Block>{this.props.children}</Block>
               </Block>
             </Box>
 

@@ -8,18 +8,11 @@ class Feedback extends Component {
      state: PropTypes.shape ({
         good: PropTypes.number.isRequired,
         neutral: PropTypes.number.isRequired,
-        bad: PropTypes.number.isRequired
+        bad: PropTypes.number.isRequired,
+        total: PropTypes.number.isRequired,
+        positivePercentage: PropTypes.number.isRequired,
      })
   };
-
-
-    state = {
-        good: this.props.good,
-        neutral: this.props.neutral,
-        bad: this.props.bad,
-        total: this.props.total,
-        positivePercentage: this.props.positivePercentage
-      }
 
 
     render() { 

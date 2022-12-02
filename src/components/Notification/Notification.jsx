@@ -7,15 +7,11 @@ class Notification extends Component {
         message: PropTypes.string.isRequired,
     }
 
-    state = {
-        message: this.props.message,
-    }
-
     render () {
 
         return (
           <NotificBox>
-            <NotificText>{this.state.message}</NotificText>
+            <NotificText>{this.props.message}</NotificText>
           </NotificBox>
         )
     };

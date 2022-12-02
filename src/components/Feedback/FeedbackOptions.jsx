@@ -5,12 +5,14 @@ import PropTypes from 'prop-types';
 class FeedbackOptions extends Component {
   static propTypes = {
     options: PropTypes.array.isRequired,
+    onLeaveFeedback: PropTypes.func.isRequired,
   }
 
   static defaultProps = [];
 
   state = {
     options: this.props.options,
+    onLeaveFeedback: this.props.onLeaveFeedback,
   }
 
 
