@@ -5,13 +5,11 @@ import { Box } from '../Box';
 
 class Feedback extends Component {
   static propTypes = {
-     state: PropTypes.shape ({
         good: PropTypes.number.isRequired,
         neutral: PropTypes.number.isRequired,
         bad: PropTypes.number.isRequired,
         total: PropTypes.number.isRequired,
         positivePercentage: PropTypes.number.isRequired,
-     })
   };
 
 

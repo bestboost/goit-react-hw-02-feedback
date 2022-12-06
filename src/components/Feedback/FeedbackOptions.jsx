@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 
 class FeedbackOptions extends Component {
   static propTypes = {
-    options: PropTypes.array.isRequired,
+    options: PropTypes.arrayOf(
+      PropTypes.string),
     onLeaveFeedback: PropTypes.func.isRequired,
   }
 

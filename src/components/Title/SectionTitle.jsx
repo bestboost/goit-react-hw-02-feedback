@@ -6,7 +6,8 @@ import { Box } from '../Box';
 
 class Section extends Component {
     static propTypes = {
-        title: PropTypes.string.isRequired
+        title: PropTypes.string.isRequired,
+        children: PropTypes.array.isRequired
     };
 
     state = {
